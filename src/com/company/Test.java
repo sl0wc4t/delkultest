@@ -4,8 +4,10 @@ import java.util.*;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Logger;
 
 class Test {
+    private static Logger log = Logger.getLogger(Test.class.getName());
     private static final List<Integer> randoms = new ArrayList<>();
     private static final Lock randomsLock = new ReentrantLock();
     private static final Condition randomsIsEmpty = randomsLock.newCondition();
